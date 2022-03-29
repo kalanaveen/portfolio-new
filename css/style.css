@@ -97,6 +97,12 @@ li{
 .grid-two-column{
     grid-template-columns: repeat(2,1fr);
 }
+.grid-three-column{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-four-column{
+    grid-template-columns: repeat(4,1fr);
+}
 .btn{
     background: var(--gradientSupport);
     padding: 1.6rem 3.2rem;
@@ -266,4 +272,55 @@ bio section start
     border-color: transparent;
     border-bottom-color: var(--helper);
     top:-1.6rem;
+}
+
+/*================================================================= 
+portfolio section start 
+================================================================== */
+.section-portfolio{
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+.section-portfolio p{
+    max-width: 60rem;
+}
+.p-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    margin: 6.4rem 0;
+}
+.portfolio-images img{
+    width: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.img-overlay{
+    position: relative;
+    overflow:hidden;
+}
+.img-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradientSupport);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+    opacity: 0;
+}
+.img-overlay:hover > .overlay{
+    transform: translateY(0);
+    opacity: 0.8;
+}
+.img-overlay .common-heading{
+    color: var(--white);
+    text-decoration: none;
+    margin: 0;
 }
