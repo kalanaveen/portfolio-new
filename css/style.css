@@ -324,3 +324,13 @@ portfolio section start
     text-decoration: none;
     margin: 0;
 }
+
+.p-btn:active{
+    transform: translateY(-1rem);
+}
+
+.p-image-not-active{
+    display:none;
+}
+
+
