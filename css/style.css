@@ -532,3 +532,98 @@ freealncing section start
     color: var(--white);
     margin-bottom: 1.8rem;
 }
+/*================================================================= 
+contact section start 
+================================================================== */
+
+.section-contact-main{
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+    transition: all 0.3s linear;
+}
+.section-contact-main .grid{
+    gap:3.2rem;
+}
+.section-contact-main form{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+.section-contact-main input ,
+.section-contact-main textarea{
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid #c9c9c9;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: "work sans";
+    width: 100%;
+}
+.section-contact-main input[type="submit"]{
+    max-width: 30%;
+    border: none;
+}
+
+/*================================================================= footer section start 
+================================================================== */
+.section-footer{
+    background: var(--heading);
+    transform:all 0.7s linear;
+}
+.section-footer h3{
+    color: var(--white);
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+}
+.f-about p{
+    color: #adadad;
+}
+.f-links ul,
+.f-services ul,
+.f-address address{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.8rem;
+}
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a{
+    font-size: 1.8rem;
+    color:#adadad;
+    text-transform: capitalize;
+}
+.f-links span,
+.f-services span,
+.f-address span{
+    margin-right: 1rem;
+}
+.f-address p,
+.f-address p a{
+    font-style: normal;
+    color: #adadad;
+}
+.f-social-icons{
+    margin: 5rem 0;
+    text-align: center;
+    color: #adadad;
+}
+.f-social-icons .icons{
+    width: 4rem;
+    height: 4rem;
+    background-color:var(--icon-bg);
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    color:var(--white);
+    animation: water-wave 3s linear infinite;
+}
+.f-credits p{
+    text-align: center;
+    color: #adadad;
+}
+.section-footer a:hover,
+.section-footer a:active{
+    color: var(--white);
+}
