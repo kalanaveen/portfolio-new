@@ -32,3 +32,47 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+// scrool to top button
+const heroSection = document.querySelector(".section-hero");
+const footerElem = document.querySelector(".section-footer");
+
+const scroollElement = document.createElement("div");
+scroollElement.classList.add("scrollTop-style");
+
+scroollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top"></ion-icon>`;
+
+footerElem.after(scroollElement);
+const scrollTop = ()=>{
+  heroSection.scrollIntoView({behavior:"smooth"})
+};
+
+scroollElement.addEventListener("click",scrollTop);
+
+// smooth scrool effect
+const portfolioSec = document.querySelector(".section-portfolio");
+const contactSec = document.querySelector(".section-contact");
+
+document.querySelector(".portfolio-link").addEventListener("click",()=>{
+  portfolioSec.scrollIntoView({behavior:"smooth"})
+});
+
+document.querySelector(".hireme-btn").addEventListener("click",()=>{
+  contactSec.scrollIntoView({behavior:"smooth"})
+});
+
+// animate number counters
+const counterNum = document.querySelectorAll(".counter-numbers");
+const speed = 200;
+
+counterNum.forEach((curElem)=>{
+    const updateNumber = ()=>{
+       const targetNumber = parseInt(curElem.dataset.number);
+       const initialNumber = parseInt(curElem.innerText);
+       const incrementNumber = Math.trunc(targetNumber/speed);
+       if(initialNumber < targetNumber){
+         curElem.innerText = `${initialNumber + incrementNumber} +`;
+         setTimeout(updateNumber,10);
+       }
+    };
+    updateNumber();
+});

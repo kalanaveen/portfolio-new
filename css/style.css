@@ -627,3 +627,22 @@ contact section start
 .section-footer a:active{
     color: var(--white);
 }
+
+/* scrool to top section */
+
+.scrollTop-style{
+   position: fixed;
+   right: 2%;
+   bottom: 5%;
+   z-index: 1;
+}
+.scroll-top{
+    width: 4rem;
+    height: 4rem;
+    background: var(--helper);
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    color: var(--white);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}
