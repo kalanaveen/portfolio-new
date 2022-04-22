@@ -22,17 +22,36 @@ p_btns.addEventListener('click', (e) => {
   img_active.forEach(curElem => curElem.classList.remove('p-image-not-active'));
 })
 // initialize swipper 
-var swiper = new Swiper(".mySwiper", {
+new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 30,
   autoplay: {
     delay: 2500,
+    disableOnInteraction:false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
+const myJsmedia = (widthSize)=>{
+  if(widthSize.matches){
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    });
+  }else{
+    new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    });
+  }
+}
+const widthSize = window.matchMedia("(max-width:780px)");
+// call listener function at run time
+myJsmedia(widthSize);
+// attach listener function on state changes 
+widthSize.addEventListener("change",myJsmedia)
 // scrool to top button
 
 const footerElem = document.querySelector(".section-footer");
